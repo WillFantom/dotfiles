@@ -1,0 +1,26 @@
+# SH Aliases for OSX Machines
+
+source ~/.zsh/.zsh_functions.osx
+
+# Safari URLs
+alias portal="open https://portal.lancs.ac.uk"
+
+# Handy Finder
+alias f='open -a Finder ./'
+
+# System
+alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias stfu="osascript -e 'set volume output muted true'"
+alias afk="open -a /System/Library/CoreServices/ScreenSaverEngine.app"
+
+# Spotify
+alias pp="osascript -e'if application \"Spotify\" is running then' -e'tell application \"Spotify\" to playpause' -e'end if'"
+alias pause="osascript -e'if application \"Spotify\" is running then' -e'tell application \"Spotify\" to pause' -e'end if'"
+alias play="osascript -e'if application \"Spotify\" is running then' -e'tell application \"Spotify\" to play' -e'end if'"
+alias artist="osascript -e'if application \"Spotify\" is running then' -e'tell application \"Spotify\" to get artist of current track' -e'end if'"
+alias track="osascript -e'if application \"Spotify\" is running then' -e'tell application \"Spotify\" to get name of current track' -e'end if'"
+alias next="osascript -e'if application \"Spotify\" is running then' -e'tell application \"Spotify\" to next track' -e'end if'"
+alias prev="osascript -e'if application \"Spotify\" is running then' -e'tell application \"Spotify\" to previous track' -e'end if'"
+
+# Other
+alias flushdns='dscacheutil -flushcache'

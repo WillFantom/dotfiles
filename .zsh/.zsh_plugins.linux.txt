@@ -1,0 +1,4 @@
+# Plugins for Linux machines
+# Distro specific in own file
+
+zpm-zsh/dropbox

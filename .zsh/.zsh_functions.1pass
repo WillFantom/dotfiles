@@ -1,0 +1,13 @@
+function 1pass() {
+    export PASS_DOMAIN="https://my.1password.com"
+    eval $(op signin ${PASS_DOMAIN})
+}
+function username() {
+    op get item $1 | jq -r '.details.fields[] | select(.designation=="username").value'
+}
+function pass() {
+    op get item $1 | jq -r '.details.fields[] | select(.designation=="password").value'
+}
+function otpass() {
+    op get totp $1
+}

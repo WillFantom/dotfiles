@@ -1,0 +1,22 @@
+# Xen Light
+if [ -x "$(command -v xl)" ]; then
+    alias xl="sudo xl"
+    alias xlmk="xl create"
+    alias xlc="xl create"
+    alias xconsole="xl console"
+    alias xcon="xl console"
+    alias xls="xl list"
+    alias xlrm="xl destroy"
+    alias xld="xl destroy"
+fi
+
+# Vale Ctl
+if [ -x "$(command -v vale-ctl)" ]; then
+    alias vale-ctl="sudo vale-ctl"
+    alias vctl="sudo vale-ctl"
+fi
+
+# Pkt-Gen
+if [ -x "$(command -v pkt-gen)" ]; then
+    alias pkt-gen-ctl="sudo pkt-gen"
+fi

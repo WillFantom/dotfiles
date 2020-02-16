@@ -1,0 +1,20 @@
+# Plugins for all machines running Antibody / Antigen
+# Place OS Specific plugins in their own file
+
+# Generic
+chrissicool/zsh-256color
+mafredri/zsh-async
+robbyrussell/oh-my-zsh path:plugins/sudo
+rupa/z
+hkupty/ssh-agent
+
+# Theme
+#denysdovhan/spaceship-prompt
+
+# Completion
+zsh-users/zsh-autosuggestions
+robbyrussell/oh-my-zsh path:plugins/pip
+robbyrussell/oh-my-zsh path:plugins/vagrant
+
+# Load Last
+zdharma/fast-syntax-highlighting

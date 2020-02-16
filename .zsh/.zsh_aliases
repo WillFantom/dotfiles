@@ -1,0 +1,82 @@
+# Standard
+alias ..="cd .."
+alias ...="cd ../.."
+alias grep="grep --color=auto"
+
+# Dirs
+alias docs="cd ~/Documents"
+alias gitlab="cd ~/Repos/gitlab"
+alias github="cd ~/Repos/github"
+alias delta="cd ~/Repos/delta"
+alias downloads="cd ~/Repos/Downloads"
+
+# Exa
+if [ -x "$(command -v exa)" ]; then
+    alias ls="exa --icons"
+    alias lsl="exa -l"
+    alias lsa="exa -a --icons"
+fi
+
+# Gotop
+## Moving to ytop when it can get temps on macos
+if [ -x "$(command -v gotop)" ]; then
+    alias gotop="gotop -p -b -c monokai"
+    alias top=gotop
+    if [ -x "$(command -v htop)" ]; then
+        alias htop=gotop
+    fi
+    alias gtop=gotop
+fi
+
+# 1Password CLI
+if [ -x "$(command -v op)" ]; then
+    if [ -x "$(command -v jq)" ]; then
+        source ~/.zsh/.zsh_functions.1pass
+    fi
+fi
+
+# Dry
+if [ -x "$(command -v dry)" ]; then
+    alias dry="dry -p -w=1"
+fi
+
+# Trash
+if [ -x "$(command -v trash)" ]; then
+    alias del="trash"
+fi
+
+# VS Code
+alias vsc=code
+
+# SSH
+alias crunchie="ssh crunchie"
+alias daim="ssh daim"
+alias fredo="ssh fredo"
+alias galaxy="ssh galaxy"
+
+# Docker
+if [ -x "$(command -v docker)" ]; then
+    alias dls="docker images"
+    alias dps="docker container ls"
+    alias drm="docker rm -f"
+    alias drmi="docker rmi"
+    alias dubuntu="docker run --rm -it -v $(pwd):/shared ubuntu:bionic /bin/bash"
+    alias dalpine="docker run --rm -it -v $(pwd):/shared alpine:latest /bin/ash"
+    alias dpython="docker run --rm -it -v $(pwd):/shared python:3.8-alpine /bin/ash"
+    alias drmi-dang="docker rmi $(docker images -aq --filter dangling=true)"
+    alias dbuild="docker build"
+fi
+
+# Git Batch
+if [ -x "$(command -v gitbatch)" ]; then
+    alias gitbatch="gitbatch --recursive-depth=3"
+fi
+
+# Other
+alias whois="whois -h whois-servers.net"
+alias weather="curl http://v2.wttr.in/Lancaster,UK"
+
+# Help Me Pls
+alias rm="echo Use trash rather than rm or just use /bin/rm"
+alias clear="/usr/bin/clear && echo Use Ctrl+L rather than the clear command"
+alias cls="clear"
